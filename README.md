@@ -1,6 +1,6 @@
 # Text-Mining-with-R
 
-Table of Contents
+**Table of Contents**
 
 - Text cleanup and processing 
 - Regular expression, stemming, removing numbers, stop words, punctuation, and white spaces 
