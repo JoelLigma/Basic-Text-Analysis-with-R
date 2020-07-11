@@ -19,7 +19,6 @@ text_file <- read.csv("book4.csv")
 #Investigate the file
 head(text_file)
 str(text_file)
-summary(text_file)
 
 ## TEXT PREPROCESSING
 
@@ -41,16 +40,16 @@ tdm <- TermDocumentMatrix(book_corpus)
 # count row (i.e, terms)
 # must convert to matrix to work with as dtm is stored as a memory efficient sparse matrix doesn't store
 # empty fields
-tdm$nrow 
+tdm$nrow # 6550
 
-# inspect the term document matrix, make sure to subset when its very large 
+# inspect the term document matrix, make sure to subset when its very large file
 inspect(tdm[1:30, 1:30])
 
 # there are a lot of terms and perhaps high sparsity lets trim down and remove terms
 # remove words that are over 99% sparse (i.e., do not appear in 99% of documents)
 tdm <- removeSparseTerms(tdm, 0.99)
-tdm$nrow #now 54 terms left
-tdm$ncol #7619 sentences 
+tdm$nrow # now 51 terms left
+tdm$ncol # 7619 sentences 
 inspect(tdm[1:51, 1:3])
 
 inspect(tdm)
@@ -75,17 +74,17 @@ barplot(d[1:10,]$freq, las = 1, names.arg = d[1:10,]$word,
         col ="lightblue", main ="Most frequent words",
         ylab = "Word frequencies")
 
-# check for associated terms for "hester", "pearl" and "little"
+# check for associated terms for "hester", "pearl" and "littl"
 # normally set a limit for corrs to a reasonable r size, but this is sparse data & we trimmed terms
 
 findAssocs(tdm, terms = c("hester", "pearl"), corlimit = .0)
 
-findAssocs(tdm, terms = c("little"), corlimit = .0) 
+findAssocs(tdm, terms = c("littl"), corlimit = .0) 
 
 # lets cluster the documents, but first find optimal k
 wss <- numeric(10) 
 for (k in 1:10) wss[k] <- sum(kmeans(tdm, centers=k)$withinss)
-plot(wss, type="b",xlab = "Number of K") #s eems like 2 or 3 will cover it
+plot(wss, type="b",xlab = "Number of K") # let's try 10
 
-book.kmeans <- kmeans(tdm,3)
+book.kmeans <- kmeans(tdm,10)
 book.kmeans$cluster # lets looks at cluster membership
