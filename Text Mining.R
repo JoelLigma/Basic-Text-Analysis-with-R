@@ -84,7 +84,7 @@ findAssocs(tdm, terms = c("littl"), corlimit = .0)
 # lets cluster the documents, but first find optimal k
 wss <- numeric(10) 
 for (k in 1:10) wss[k] <- sum(kmeans(tdm, centers=k)$withinss)
-plot(wss, type="b",xlab = "Number of K") # let's try 10
+plot(wss, type="b",xlab = "Number of K") # let's try 3 for simplicity
 
-book.kmeans <- kmeans(tdm,10)
+book.kmeans <- kmeans(tdm,3)
 book.kmeans$cluster # lets looks at cluster membership
