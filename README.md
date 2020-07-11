@@ -7,7 +7,7 @@
 - Create a Term Document Matrix 
 - Report descriptive stats on words and generate a word cloud 
 - Conduct a k-means cluster of the words and identify words that occur in first two clusters and interpret what these clusters mean 
-- Submit 1 page executive summary of the results of this analysis, processing steps and what you learned from the analysis. 
+- Write a 1-page executive summary of the results of this analysis, processing steps and what you learned from the analysis. 
 
 Date: Nov 2019
 
