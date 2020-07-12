@@ -1,17 +1,18 @@
 # Text-Mining-with-R
 
+Date: Nov 2019
+
+Source: https://www.gutenberg.org/files/25344/25344-0.txt
+
 **Table of Contents**
 
 - Text cleanup and processing 
 - Regular expression, stemming, removing numbers, stop words, punctuation, and white spaces 
 - Create a Term Document Matrix 
 - Report descriptive stats on words and generate a word cloud 
-- Conduct a k-means cluster of the words and identify words that occur in first two clusters and interpret what these clusters mean 
-- Write a 1-page executive summary of the results of this analysis, processing steps and what you learned from the analysis. 
+- Conduct a k-means cluster of the words, identify words that occur in the clusters and interpret what these clusters mean 
+- Write a 1-page executive summary of the results of this analysis, processing steps and what you learned from the analysis
 
-Date: Nov 2019
-
-Source: https://www.gutenberg.org/files/25344/25344-0.txt
 
 **Introduction**
 
