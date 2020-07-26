@@ -1,4 +1,4 @@
-# Text-Mining-with-R
+# Text-Analysis-with-R
 
 Date: Nov 2019
 
