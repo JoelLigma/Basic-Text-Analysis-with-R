@@ -1,4 +1,4 @@
-# Text-Analysis-with-R
+# Basic Text-Analysis-with-R
 
 Date: Nov 2019
 
